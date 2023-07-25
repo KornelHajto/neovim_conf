@@ -1,0 +1,2 @@
+require("alexanderhajto.remap")
+
