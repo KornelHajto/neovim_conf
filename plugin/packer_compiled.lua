@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/alexanderhajto/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/alexanderhajto/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/alexanderhajto/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/alexanderhajto/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/alexanderhajto/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/alexanderh/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?.lua;/home/alexanderh/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?/init.lua;/home/alexanderh/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?.lua;/home/alexanderh/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/alexanderh/.cache/nvim/packer_hererocks/2.1.1696795921/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -74,104 +74,245 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   LuaSnip = {
     loaded = true,
-    path = "/home/alexanderhajto/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  catppuccin = {
-    config = { "\27LJ\2\n:\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\27colorscheme catppuccin\bcmd\bvim\0" },
+  ["cmp-buffer"] = {
     loaded = true,
-    path = "/home/alexanderhajto/.local/share/nvim/site/pack/packer/start/catppuccin",
-    url = "https://github.com/catppuccin/nvim"
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/home/alexanderhajto/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  harpoon = {
+  ["colorbuddy.nvim"] = {
     loaded = true,
-    path = "/home/alexanderhajto/.local/share/nvim/site/pack/packer/start/harpoon",
-    url = "https://github.com/theprimeagen/harpoon"
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
+    url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
-  ["lsp-zero.nvim"] = {
+  ["git.nvim"] = {
     loaded = true,
-    path = "/home/alexanderhajto/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
-    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/git.nvim",
+    url = "https://github.com/dinhhuy258/git.nvim"
+  },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["lspkind-nvim"] = {
+    loaded = true,
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
+    url = "https://github.com/onsails/lspkind-nvim"
+  },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/nvimdev/lspsaga.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "/home/alexanderhajto/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
-    path = "/home/alexanderhajto/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  melange = {
+  ["neosolarized.nvim"] = {
     loaded = true,
-    path = "/home/alexanderhajto/.local/share/nvim/site/pack/packer/start/melange",
-    url = "https://github.com/savq/melange-nvim"
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/neosolarized.nvim",
+    url = "https://github.com/svrana/neosolarized.nvim"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
+  ["nvim-bufferline.lua"] = {
+    loaded = true,
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua",
+    url = "https://github.com/akinsho/nvim-bufferline.lua"
   },
   ["nvim-cmp"] = {
     loaded = true,
-    path = "/home/alexanderhajto/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/alexanderhajto/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/home/alexanderhajto/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
+  },
+  ["nvim-ts-context-commentstring"] = {
+    loaded = true,
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
+    url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/alexanderhajto/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
-  },
-  playground = {
-    loaded = true,
-    path = "/home/alexanderhajto/.local/share/nvim/site/pack/packer/start/playground",
-    url = "https://github.com/nvim-treesitter/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/alexanderhajto/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["presence.nvim"] = {
+  ["telescope-file-browser.nvim"] = {
     loaded = true,
-    path = "/home/alexanderhajto/.local/share/nvim/site/pack/packer/start/presence.nvim",
-    url = "https://github.com/andweeb/presence.nvim"
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
+    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/home/alexanderhajto/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  undotree = {
+  ["todo-comments.nvim"] = {
+    config = {
+      colors = {
+        default = { "Identifier", "#7C3AED" },
+        error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
+        hint = { "DiagnosticHint", "#10B981" },
+        info = { "DiagnosticInfo", "#2563EB" },
+        test = { "Identifier", "#FF00FF" },
+        warning = { "DiagnosticWarn", "WarningMsg", "#FBBF24" }
+      },
+      gui_style = {
+        bg = "BOLD",
+        fg = "NONE"
+      },
+      highlight = {
+        after = "fg",
+        before = "",
+        comments_only = true,
+        exclude = {},
+        keyword = "wide",
+        max_line_len = 400,
+        multiline = true,
+        multiline_context = 10,
+        multiline_pattern = "^.",
+        pattern = ".*<(KEYWORDS)\\s*:"
+      },
+      keywords = {
+        FIX = {
+          alt = { "FIXME", "BUG", "FIXIT", "ISSUE" },
+          color = "error",
+          icon = " "
+        },
+        HACK = {
+          color = "warning",
+          icon = " "
+        },
+        NOTE = {
+          alt = { "INFO" },
+          color = "hint",
+          icon = " "
+        },
+        PERF = {
+          alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" },
+          icon = " "
+        },
+        TEST = {
+          alt = { "TESTING", "PASSED", "FAILED" },
+          color = "test",
+          icon = "⏲ "
+        },
+        TODO = {
+          color = "info",
+          icon = " "
+        },
+        WARN = {
+          alt = { "WARNING", "XXX" },
+          color = "warning",
+          icon = " "
+        }
+      },
+      merge_keywords = true,
+      search = {
+        args = { "--color=never", "--no-heading", "--with-filename", "--line-number", "--column" },
+        command = "rg",
+        pattern = "\\b(KEYWORDS):"
+      },
+      sign_priority = 8,
+      signs = true
+    },
     loaded = true,
-    path = "/home/alexanderhajto/.local/share/nvim/site/pack/packer/start/undotree",
-    url = "https://github.com/mbbill/undotree"
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
   },
-  ["vim-fugitive"] = {
+  ["trouble.nvim"] = {
     loaded = true,
-    path = "/home/alexanderhajto/.local/share/nvim/site/pack/packer/start/vim-fugitive",
-    url = "https://github.com/tpope/vim-fugitive"
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
+  },
+  ["vim-wakatime"] = {
+    loaded = true,
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/vim-wakatime",
+    url = "https://github.com/wakatime/vim-wakatime"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
+  },
+  ["zen-mode.nvim"] = {
+    loaded = true,
+    path = "/home/alexanderh/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
+    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: catppuccin
-time([[Config for catppuccin]], true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\27colorscheme catppuccin\bcmd\bvim\0", "config", "catppuccin")
-time([[Config for catppuccin]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+time([[Config for todo-comments.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
