@@ -1,23 +1,23 @@
-require('noctune.base')
-require('nocturne.highlights')
-require('nocturne.maps')
-require('nocturne.plugins')
+-- Set leader key to space
+vim.g.mapleader = " "  -- Spacebar as leader key
 
-local has = vim.fn.has
-local is_mac = has "macunix"
-local is_linux = has "unix"
-local is_win = has "win32"
-local is_wsl = has "wsl"
+-- Indításkor ellenőrzi, hogy a lazy.nvim telepítve van-e
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git", "clone", "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
-if is_mac == 1 then
-  require('nocturne.macos')
-end
-if is_linux == 1 then
-  require('nocturne.linux')
-end
-if is_win == 1 then
-  require('nocturne.windows')
-end
-if is_wsl == 1 then
-  require('nocturne.wsl')
-end
+-- Pluginok betöltése
+require("lazy").setup("plugins")
+require("lsp")
+
+vim.cmd("colorscheme tokyonight-day")
+vim.filetype.add({ extension = { razor = "razor" } })
+
+require("keymaps")
+print("Keymaps file loaded!")
+
